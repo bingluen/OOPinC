@@ -58,7 +58,7 @@ void destroyids (ids target)
 
 int valid(ids target)
 {
-	return 1;
+	return 1;//Can't find the real rule so just set it to true :D
 }
 
 void printids(ids target)
