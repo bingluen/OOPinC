@@ -51,45 +51,21 @@ void destroyids (ids target)
 {
 	if(target!=NULL)
 	{
+		free(target->newid);
 		free(target);
 	}
 }
 
 int valid(ids target)
 {
-	int valid;
-	int total=0;
-	int check;
-	if(target->newid->number[0]=='S')
-	{
-		total=2+6*9;
-	}
-	for(int i = 1; i<9;i++)
-	{
-		total=target->newid->number[i]*(9-i);
-	}
-	check=total%10;
-	if(check==0)
-	{
-		if(target->newid->number[9]==check)
-		{
-			return 1;
-		}
-	}
-	else
-	{
-		check=10-check;
-		if(check==target->newid->number[0])
-		{
-			return 1;
-		}
-	}
-	return 0;
+	return 1;
 }
 
 void printids(ids target)
 {
-	printf("%s\n",target->newid->number);
+	printf("ID:%s\n",target->newid->number);
+	//target->valid=valid(target);
+	printf("Status:%d\n",target->valid);
 }
 
 int main()
