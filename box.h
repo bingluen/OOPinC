@@ -2,10 +2,6 @@ typedef struct box box; // box with volume function
 typedef struct boxwmf boxwmf;//box with more functions
 typedef int (*boxvolume) (box *self);
 
-int volume (box *self);
-//int compare (boxwmf *self, boxwmf *other);
-void initboxx(box *self);
-
 struct box
 {
 	int length;
@@ -20,3 +16,6 @@ struct boxwmf
 	//int (*compare) (boxwmf *self, boxwmf *other);
 };
 
+int volume (struct box *self);
+//int compare (boxwmf *self, boxwmf *other);
+void initboxx(struct box **self);
