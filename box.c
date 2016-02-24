@@ -20,15 +20,14 @@ int volume (box *self)
 	}
 }*/
 
-void initboxx(box *self)
+void initboxx(box **self)
 {
-	if(self==NULL)
+	if(*self==NULL)
 	{
-		self=(box *)malloc(sizeof(struct box));
-		self->length=10;
-		self->breadth=5;
-		self->height=6;
-		printf("%d\n",(self->length)*(self->breadth)*(self->height));
-		self->boxvolume=volume;
+		*self = (box *) malloc(sizeof(struct box));
+		(*(self))->length = 10;
+		(*(self))->breadth = 5;
+		(*(self))->height = 6;
+		printf("%d\n",((*(self))->length)*((*(self))->breadth)*((*(self))->height));
 	}
 }
