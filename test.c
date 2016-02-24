@@ -5,6 +5,6 @@
 int main()
 {
 	box *newbox=NULL;
-	initboxx(newbox);
-	newbox->boxvolume(newbox);
+	initboxx(&newbox);
+	//newbox->boxvolume(newbox);
 }
